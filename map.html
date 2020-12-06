@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>Portfolio</span>
+    </div>
+    <div id="about">
+      <a href="#" title="Возможности" onclick="slowScroll('#main')">About me</a>
+      <a href="#" onclick="slowScroll('#overview')" title="Преимущества">Free time</a>
+      <a href="#" onclick="slowScroll('#contacts')" title="Контакты">Contacts</a>
+      <a href="#" onclick="slowScroll('#faq')" title="Ответы на вопросы">Additional information</a>
+    </div>
+  </header>
+
+  <div id="top">
+    <h1>Information</h1>
+    <h3>about me</h3>
+  </div>
+
+  <div id="main">
+    <div class="intro">
+      <h2>Shortly about myself</h2>
+      <span>Summary</span>
+    </div>
+    <div class="text">
+      <span>My name is Temerlan, I am 18 years old, I study at the university. I can’t say that I love going there, but I’m learning quite well. From the very childhood I went to different circles. These are basketball, gymnastics, hip hop, volleyball, and swimming. But, unfortunately, I did not find myself in anything. I am a very cultured and sociable person. I just love to sleep, This is my favorite pastime. When I get up early, it makes me very angry. I am pleased to make new acquaintances with people. I communicate with everyone. It's easy for me to find a common language. I am a calm person by nature. I love listening to music and dreaming.</span>
+    </div>
+  </div>
+
+  <div id="overview">
+    <h2>What I do in my free time</h2>
+    <h4>I only do two things</h4>
+
+    <div class="img">
+      <img src="https://eksmo.ru/upload/iblock/041/books_720_min_min.jpg" alt="">
+      <span>Learning English</span>
+    </div>
+    <div class="img">
+      <img src="https://miro.medium.com/max/1024/1*xPumAENQ-UhRNd8EtfSiQw.jpeg" alt="">
+      <span>And I try to understand the code I wrote</span>
+    </div>
+  </div>
+
+  <div id="contacts">
+    <center><h5>Feedback</h5></center>
+    <form id="form_input">
+      <label for="name">Name <span>*</span></label><br>
+      <input type="text" placeholder="Enter your name" name="name" id="name"><br>
+      <label for="email">Your mail <span>*</span></label><br>
+			<input type="email" placeholder="Enter your email" name="email" id="email"><br>
+			<label for="message">Message <span>*</span></label><br>
+			<textarea placeholder="Please enter your message" name="message" id="message"></textarea><br>
+			<div id="mess_send" class="btn">Send message</div>
+    </form>
+  </div>
+
+  <div id="faq">
+    <div>
+      <span class="title">Work</span><br>
+      <span class="heading">Am i studying or working?</span>
+      <p>I work together with my studies and I more than like it. At the moment I work as a teacher and I really like it if possible I would like to continue this activity.</p>
+      
+    </div>
+    <div>
+      <span class="title">Information</span><br>
+      <span class="heading">Want to know more about me?</span>
+      <p>If you want more information about me, leave your requests in the above form, I will contact you to discuss cooperation and get to know each other better.</p>
+      
+    </div>
+    <div>
+      <span class="title">Warranty</span><br>
+      <span class="heading">What guarantees are there?</span>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium beatae asperiores debitis perspiciatis perferendis nemo tempore distinctio officia commodi et non tempora laudantium culpa nostrum, quidem, quasi ratione itaque nam.</p>
+      
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
+</body>
+</html>
